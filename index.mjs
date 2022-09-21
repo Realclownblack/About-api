@@ -31,7 +31,7 @@ Comment.belongsTo(Post)
 
 const app = fastify()
 
-app.register(cors, { origin: true })
+app.register(cors, { origin: false })
 
 app.get("/post", async (req, res) => {
     const posts = await Post.findAll()
