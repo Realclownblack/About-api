@@ -2,6 +2,8 @@ import fastify from 'fastify'
 import { DataTypes, Sequelize } from 'sequelize'
 import cors from '@fastify/cors'
 
+const port = process.env.PORT || 3000
+
 const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: 'banco.sqlite'
@@ -70,4 +72,4 @@ app.get("/post/:id/comments", async (req, res) => {
     res.send(comments)
 })
 
-app.listen(5050);
+app.listen(port);
