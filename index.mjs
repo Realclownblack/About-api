@@ -70,4 +70,4 @@ app.get("/post/:id/comments", async (req, res) => {
     res.send(comments)
 })
 
-app.listen(3000);
+app.listen(5050);
